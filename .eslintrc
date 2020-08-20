@@ -13,7 +13,8 @@
   ],
   "globals": {
     "document": false,
-    "window": false
+    "window": false,
+    "Audio": false
   },
   "rules": {
     "no-console": "off",
