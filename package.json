@@ -6,6 +6,7 @@
   "author": "Augusto Mentz <augustohmn.tech@gmail.com> (https://github.com/augustomentz)",
   "license": "MIT",
   "scripts": {
+    "start": "webpack-dev-server --open",
     "lint": "eslint src/**/*.js",
     "pre-commit": "yarn lint",
     "test": "mocha tests/**/**.spec.js --require @babel/register",
@@ -17,6 +18,9 @@
     "reporter": [
       "text",
       "html"
+    ],
+    "exclude": [
+      "tests/**"
     ]
   },
   "husky": {
@@ -35,11 +39,17 @@
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.0",
     "husky": "^4.2.5",
+    "jsdom": "^16.4.0",
+    "jsdom-global": "^3.0.2",
     "mocha": "^8.1.1",
     "nyc": "^15.1.0",
     "prettier": "^2.0.5",
     "rimraf": "^3.0.2",
     "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "ahm-spotify-api-wrapper": "^1.0.5"
   }
 }
